@@ -1,0 +1,47 @@
+# --- System / OS ---
+.DS_Store
+Thumbs.db
+
+# --- Go / Services ---
+bin/
+vendor/
+*.exe
+*.test
+
+# --- Python / Tooling ---
+__pycache__/
+.venv/
+venv/
+.python-version
+
+# --- Terraform & Infrastructure ---
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+*.tfvars.json
+.terraform.lock.hcl
+crash.log
+override.tf
+
+# --- Security / Secrets (CRITICAL) ---
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.pub
+secret.tfvars
+
+# --- GCP Credentials & Local Config ---
+# Prevents accidental upload of Service Account JSON keys
+*.json
+!api/proto/*.json
+!api/openapi/*.json
+gcp-key.json
+adc.json
+.config/gcloud/
+
+# --- Deliverables & Artifacts ---
+data/output/
+diagrams/as-code/*.png
